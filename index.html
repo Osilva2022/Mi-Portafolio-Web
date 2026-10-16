@@ -17,7 +17,511 @@
         }
 
         /* Slate 800 */
-        .bg-darker-custom {
+        .bg-darker-custom {<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Osman Silva Ruiz</title>
+<meta name="description" content="Osman Silva Ruiz, ingeniero de software full-stack en Puerto Vallarta. Sistemas de reservas, inventarios e integraciones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+html{scroll-behavior:smooth}
+
+/* Layout: trabajo primero. Columna de 1200px, retícula de 12 columnas, reglas de 1px visibles, esquinas rectas. */
+:root{
+  --bg:#FAFAFA;
+  --ink:#0A0A0B;
+  --soft:#52525B;
+  --faint:#A1A1AA;
+  --rule:#E4E4E7;
+  --tile:#F1F1F3;
+  --link:#2357D9;
+  --sans:"Geist",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0B0B0C;--ink:#F4F4F5;--soft:#A1A1AA;--faint:#63636B;--rule:#26262A;--tile:#151517;--link:#86A8FF;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0B0B0C;--ink:#F4F4F5;--soft:#A1A1AA;--faint:#63636B;--rule:#26262A;--tile:#151517;--link:#86A8FF;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+::selection{background:var(--ink);color:var(--bg)}
+
+.wrap{max-width:1200px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+
+.u{background-image:linear-gradient(currentColor,currentColor);background-size:100% 1px;background-position:0 100%;background-repeat:no-repeat;padding-bottom:1px}
+.u:hover{color:var(--link)}
+
+/* barra */
+.bar .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:22px;flex-wrap:wrap;font-size:15px}
+.bar nav{display:flex;gap:24px;flex-wrap:wrap;color:var(--soft)}
+.bar nav a:hover{color:var(--ink)}
+.bar strong{font-weight:600}
+
+/* intro */
+.intro .wrap{padding-block:clamp(56px,10vw,128px) clamp(56px,8vw,104px)}
+.intro h1{font-size:clamp(44px,8.6vw,118px);font-weight:600;letter-spacing:-.05em;line-height:.9}
+.statement{margin-top:clamp(28px,4vw,44px);font-size:clamp(21px,2.5vw,32px);line-height:1.3;letter-spacing:-.02em;max-width:34ch;color:var(--soft);text-wrap:pretty}
+.statement b{font-weight:500;color:var(--ink)}
+.intro-foot{margin-top:clamp(36px,5vw,56px);display:flex;gap:12px 28px;flex-wrap:wrap;font-size:15px}
+.intro-foot span{color:var(--soft)}
+
+/* encabezado de sección */
+.sec{border-top:1px solid var(--ink)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:18px 0;font-size:15px}
+.sec-head h2{font-size:15px;font-weight:600;letter-spacing:0}
+.sec-head span{color:var(--soft);font-family:var(--mono);font-size:13px}
+
+/* proyectos */
+.work{padding-block:clamp(36px,5vw,56px) clamp(56px,7vw,88px);border-bottom:1px solid var(--rule)}
+.work:last-child{border-bottom:0}
+.shots{display:grid;gap:12px}
+.shots.two{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+.shot{background:var(--tile);border:1px solid var(--rule);overflow:hidden;aspect-ratio:16/10;max-width:100%}
+.shots.two .shot:last-child{aspect-ratio:auto}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.work-text{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px 32px;margin-top:28px}
+.work-title{grid-column:span 4}
+.work-title h3{font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.035em;line-height:1.05}
+.work-title p{color:var(--soft);margin-top:8px;font-size:15px;max-width:30ch}
+.work-body{grid-column:span 5;display:grid;gap:16px;align-content:start}
+.work-body > p{font-size:17px;line-height:1.55}
+.work-body li{position:relative;padding-left:18px;color:var(--soft);font-size:15px}
+.work-body li + li{margin-top:6px}
+.work-body li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--ink)}
+.work-meta{grid-column:span 3;display:grid;gap:14px;align-content:start;font-size:14px}
+.work-meta div{display:grid;gap:2px}
+.work-meta dt{color:var(--faint)}
+.work-meta dd{color:var(--ink)}
+.work-meta .live{margin-top:4px}
+.num{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* incidente sin captura */
+.ledger{border:1px solid var(--rule);background:var(--tile);overflow-x:auto}
+.ledger table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+.ledger th,.ledger td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--rule);vertical-align:top}
+.ledger tr:last-child td{border-bottom:0}
+.ledger th{font-weight:500;color:var(--soft);font-size:14px}
+.ledger td:first-child{font-family:var(--mono);font-size:14px;white-space:nowrap;width:120px}
+.ledger tr.origin td{color:var(--ink);font-weight:500}
+.ledger tr.origin td:first-child::after{content:" ●";color:#D14343}
+.ledger caption{caption-side:bottom;text-align:left;padding:14px 20px;color:var(--soft);font-size:13px;border-top:1px solid var(--rule)}
+
+/* experiencia */
+.jobs{padding-block:clamp(28px,4vw,40px) clamp(56px,7vw,88px)}
+.job{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px 32px;padding-block:22px;border-bottom:1px solid var(--rule)}
+.job:last-child{border-bottom:0}
+.job .when{grid-column:span 2;font-family:var(--mono);font-size:14px;color:var(--soft);padding-top:3px;font-variant-numeric:tabular-nums}
+.job .who{grid-column:span 4}
+.job .who h3{font-size:20px;font-weight:600;letter-spacing:-.02em;line-height:1.25}
+.job .who p{color:var(--soft);font-size:15px}
+.job .what{grid-column:span 6;font-size:16px}
+
+/* herramientas */
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;padding-block:clamp(28px,4vw,40px) clamp(56px,7vw,88px)}
+.tools div{padding-block:16px;border-bottom:1px solid var(--rule)}
+.tools h3{font-size:15px;font-weight:600}
+.tools p{color:var(--soft);font-size:15px;margin-top:4px}
+
+/* contacto */
+.contact{background:var(--ink);color:var(--bg)}
+.contact .wrap{padding-block:clamp(64px,9vw,120px) 40px}
+.contact p.lead{font-size:clamp(21px,2.5vw,32px);letter-spacing:-.02em;line-height:1.3;max-width:28ch;color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.mail{display:inline-block;margin-top:24px;font-size:clamp(28px,5.4vw,72px);font-weight:600;letter-spacing:-.045em;line-height:1;overflow-wrap:anywhere;user-select:all}
+.copy{margin-top:22px;font:inherit;font-size:15px;color:var(--bg);background:transparent;border:1px solid color-mix(in srgb,var(--bg) 40%,transparent);padding:10px 16px;cursor:pointer;min-height:44px}
+.copy:hover{border-color:var(--bg)}
+.copy:focus-visible{outline:2px solid var(--bg);outline-offset:3px}
+.contact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 32px;margin-top:clamp(56px,8vw,96px);padding-top:20px;border-top:1px solid color-mix(in srgb,var(--bg) 25%,transparent);font-size:15px}
+.contact-grid dt{color:color-mix(in srgb,var(--bg) 55%,transparent)}
+.contact-grid dd{overflow-wrap:anywhere}
+.contact-grid a:hover{text-decoration:underline}
+.legal{margin-top:56px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;color:color-mix(in srgb,var(--bg) 55%,transparent)}
+
+@media (max-width:900px){
+  .work-title,.work-body{grid-column:1 / -1}
+  .work-meta{grid-column:1 / -1;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .job .when{grid-column:1 / -1}
+  .job .who,.job .what{grid-column:1 / -1}
+  .tools{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .shots.two{grid-template-columns:1fr}
+  .shots.two .shot:last-child{aspect-ratio:16/10}
+  .work-meta{grid-template-columns:1fr 1fr}
+  .tools{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:no-preference){
+  .u,.bar nav a,.copy{transition:color .15s ease,border-color .15s ease}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a href="#top"><strong>Osman Silva</strong></a>
+    <nav aria-label="Secciones">
+      <a href="#trabajo">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="intro" id="top">
+  <div class="wrap">
+    <h1>Osman<br>Silva Ruiz</h1>
+    <p class="statement"><b>Ingeniero de software full-stack</b> en Puerto Vallarta. Diez años construyendo <b>sistemas de reservas, inventarios e integraciones</b> para hotelería, turismo y empresas de servicios.</p>
+    <div class="intro-foot">
+      <span>Software Engineer en XEM</span>
+      <a class="u" href="https://www.linkedin.com/in/osman-silva/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="u" href="https://github.com/Osilva2022" target="_blank" rel="noopener">GitHub</a>
+      <a class="u" href="#contacto">ing.osmansilva@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="sec" id="trabajo">
+  <div class="wrap">
+    <div class="sec-head"><h2>Proyectos</h2><span>2022 – 2026</span></div>
+
+    <article class="work" id="cabo">
+      <div class="shots">
+        <figure class="shot"><img src="img/cabo-admin-reservaciones.webp" width="1821" height="888" alt="Panel de administración de Cabo Attractions con el listado de reservaciones: fecha, folio, tours, total y estado del pago."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>Cabo Attractions</h3>
+          <p>Sistema de reservas para un operador de tours en Cabo San Lucas.</p>
+        </div>
+        <div class="work-body">
+          <p>Sitio público bilingüe con carrito de compra y un panel desde el que el cliente administra toda su operación.</p>
+          <ul>
+            <li>Catálogo de tours y combos en español e inglés, con precios por persona y carrito.</li>
+            <li>Reservaciones con folio, tours, cliente, total y estado del pago, con búsqueda y exportación.</li>
+            <li>Panel en Filament para tours, categorías, hoteles, cupones, monedas, países, pagos y usuarios.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Año</dt><dd>2025</dd></div>
+          <div><dt>Rol</dt><dd>Desarrollo completo</dd></div>
+          <div><dt>Stack</dt><dd>Laravel, Filament, Tailwind CSS, Alpine.js</dd></div>
+          <div class="live"><dd><a class="u" href="https://www.attractionscabo.com/es" target="_blank" rel="noopener">attractionscabo.com</a></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="marigalante">
+      <div class="shots two">
+        <figure class="shot"><img src="img/marigalante-home.webp" width="1600" height="1115" loading="lazy" alt="Página de inicio de Marigalante con el galeón pirata, botón de reserva y calificaciones de Tripadvisor y Google."></figure>
+        <figure class="shot"><img src="img/marigalante-tours.webp" width="1600" height="734" loading="lazy" alt="Tarjetas de tours de día y de noche con precios por adulto y niño, descuentos y botón de reserva."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>Marigalante</h3>
+          <p>Reservas y venta de tickets para el tour en barco pirata de Puerto Vallarta.</p>
+        </div>
+        <div class="work-body">
+          <p>Estuve a cargo de la reestructura del sitio y del sistema de reservas.</p>
+          <ul>
+            <li>Flujos de pago y disponibilidad en tiempo real.</li>
+            <li>Tours de día y de noche con tarifas por adulto y niño, promociones y carrito.</li>
+            <li>Sitio bilingüe con blog, galería, grupos y contacto por WhatsApp.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Periodo</dt><dd>2022 – 2024, en CPS Media</dd></div>
+          <div><dt>Rol</dt><dd>Reestructura del sitio y del sistema</dd></div>
+          <div><dt>Stack</dt><dd>Laravel, PHP 8, Livewire, Tailwind CSS</dd></div>
+          <div class="live"><dd><a class="u" href="https://pirateshipvallarta.com/es" target="_blank" rel="noopener">pirateshipvallarta.com</a></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="cic">
+      <div class="shots">
+        <figure class="shot"><img src="img/cic-inventario.webp" width="1846" height="895" loading="lazy" alt="Sistema de inventario del Centro Internacional de Convenciones de Puerto Vallarta: tabla de artículos con marca, modelo, categoría y total."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>Inventario CIC</h3>
+          <p>Centro Internacional de Convenciones de Puerto Vallarta.</p>
+        </div>
+        <div class="work-body">
+          <p>Sistema de control de inventario hecho a la medida de cómo el equipo registra y busca su equipo.</p>
+          <ul>
+            <li><span class="num">486</span> artículos con marca, modelo, categoría y existencias.</li>
+            <li>Búsqueda combinable por artículo, marca, modelo y categoría.</li>
+            <li>Módulos de inventario, catálogos y administración con acceso por usuario.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Año</dt><dd>2023</dd></div>
+          <div><dt>Rol</dt><dd>Desarrollo completo</dd></div>
+          <div><dt>Stack</dt><dd>Laravel, Tailwind CSS</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="xem">
+      <div class="shots two">
+        <figure class="shot"><img src="img/xem-home.webp" width="1600" height="814" loading="lazy" alt="Página de inicio de XEM: vehículos eléctricos para hoteles, industria y empresas."></figure>
+        <figure class="shot"><img src="img/xem-casos.webp" width="1150" height="880" loading="lazy" alt="Sección de casos de éxito de XEM con clientes de hotelería, industria y logística."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>XEM</h3>
+          <p>Venta y servicio de vehículos eléctricos en todo México.</p>
+        </div>
+        <div class="work-body">
+          <p>Reestructura del sitio corporativo y migración a Nuxt 3, con el objetivo de generar solicitudes de cotización.</p>
+          <ul>
+            <li>Soluciones por industria: hoteles, logística, aeropuertos y desarrollos inmobiliarios.</li>
+            <li>Casos de éxito por cliente, blog y preguntas frecuentes.</li>
+            <li>Formulario de diagnóstico y cotización, más contacto por WhatsApp.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Año</dt><dd>2025</dd></div>
+          <div><dt>Rol</dt><dd>Software Engineer</dd></div>
+          <div><dt>Stack</dt><dd>Nuxt 3, Vue 3</dd></div>
+          <div class="live"><dd><a class="u" href="https://xem.com.mx" target="_blank" rel="noopener">xem.com.mx</a></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="planifiesta">
+      <div class="shots">
+        <figure class="shot"><img src="img/planifiesta-home.webp" width="1600" height="893" loading="lazy" alt="Página de inicio de PlaniFiesta con buscador por tipo de evento y ciudad."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>PlaniFiesta</h3>
+          <p>Directorio de proveedores para eventos en México. Producto propio.</p>
+        </div>
+        <div class="work-body">
+          <p>Para encontrar y contactar proveedores de fiestas sin intermediarios ni comisiones. Hoy tiene <span class="num">731+</span> proveedores y <span class="num">306+</span> reseñas publicadas.</p>
+          <ul>
+            <li>Búsqueda por tipo de evento, categoría y ciudad, con perfiles y planes para proveedores.</li>
+            <li>Interfaces reactivas con Livewire y Alpine.js, calculadora de presupuesto y blog.</li>
+            <li>Pruebas automatizadas y recuperación tras una inyección de spam SEO.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Rol</dt><dd>Fundador y desarrollador</dd></div>
+          <div><dt>Stack</dt><dd>Laravel 10, Livewire 3, Alpine.js, Tailwind CSS</dd></div>
+          <div class="live"><dd><a class="u" href="https://planifiesta.com" target="_blank" rel="noopener">planifiesta.com</a></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="incidente">
+      <div class="ledger">
+        <table>
+          <caption>Cliente y dominios omitidos por confidencialidad.</caption>
+          <thead><tr><th>Sitio</th><th>Hallazgo</th></tr></thead>
+          <tbody>
+            <tr class="origin"><td>Sitio A</td><td>Origen del compromiso. Más de un año con acceso no autorizado activo.</td></tr>
+            <tr><td>Sitio B</td><td>Comprometido desde la misma cuenta de hosting compartido.</td></tr>
+            <tr><td>Sitio C</td><td>Comprometido desde la misma cuenta de hosting compartido.</td></tr>
+            <tr><td>Sitio D</td><td>Comprometido desde la misma cuenta de hosting compartido.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>Incidente en 4 sitios WordPress</h3>
+          <p>Respuesta a incidente con TLS·CyberSecurity.</p>
+        </div>
+        <div class="work-body">
+          <p>Investigación y remediación de un compromiso que afectaba cuatro sitios de un mismo cliente en hosting compartido.</p>
+          <ul>
+            <li>Identificación del sitio de origen y del alcance en los otros tres.</li>
+            <li>Hallazgo de cuentas de administrador ocultas, archivos dropper y técnicas de cloaking.</li>
+            <li>Runbook de remediación en seis fases con WP-CLI y shell, más monitoreo posterior.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Año</dt><dd>2026</dd></div>
+          <div><dt>Rol</dt><dd>Análisis y remediación</dd></div>
+          <div><dt>Herramientas</dt><dd>WP-CLI, shell, cPanel</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="barberbooze">
+      <div class="shots two">
+        <figure class="shot"><img src="img/barberbooze-home.webp" width="1194" height="639" loading="lazy" alt="Página de inicio de Barber and Booze con navegación bilingüe y galería de la barbería."></figure>
+        <figure class="shot"><img src="img/barberbooze-servicios.webp" width="1194" height="1160" loading="lazy" alt="Menú de servicios de barbería con duración y botón de reserva en cada servicio."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>Barber &amp; Booze</h3>
+          <p>Barbería con dos sucursales en Puerto Vallarta.</p>
+        </div>
+        <div class="work-body">
+          <p>Sitio bilingüe para que el cliente reserve directamente desde el servicio que le interesa.</p>
+          <ul>
+            <li>Menú de barbería y skin care con duración y botón de reserva por servicio.</li>
+            <li>Reserva por sucursal, con horarios, mapas y formulario de contacto.</li>
+            <li>Carta de cocteles y catálogo de productos.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Año</dt><dd>2023</dd></div>
+          <div><dt>Rol</dt><dd>Desarrollo junto con un colega</dd></div>
+          <div><dt>Stack</dt><dd>Tailwind CSS</dd></div>
+          <div class="live"><dd><a class="u" href="https://www.barberbooze.com/en/" target="_blank" rel="noopener">barberbooze.com</a></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="urrutia">
+      <div class="shots">
+        <figure class="shot"><img src="img/urrutia-home.webp" width="1600" height="957" loading="lazy" alt="Portada del portal de noticias Urrutia Comunica con secciones por región y notas destacadas."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>Urrutia Comunica</h3>
+          <p>Noticias de Puerto Vallarta y la región.</p>
+        </div>
+        <div class="work-body">
+          <p>Desarrollo del portal y administración de su infraestructura y seguridad.</p>
+          <ul>
+            <li>Secciones por región y tema, notas destacadas y contenido multimedia.</li>
+            <li>Espacios publicitarios en formatos de 768×90 y 300×250.</li>
+            <li>Regla en Cloudflare con desafío administrado contra tráfico automatizado recurrente.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Rol</dt><dd>Desarrollo e infraestructura</dd></div>
+          <div><dt>Stack</dt><dd>WordPress, Cloudflare, GA4</dd></div>
+          <div class="live"><dd><a class="u" href="https://urrutiacomunica.com" target="_blank" rel="noopener">urrutiacomunica.com</a></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="work" id="tribuna">
+      <div class="shots">
+        <figure class="shot"><img src="img/tribuna-home.webp" width="1180" height="1268" loading="lazy" alt="Portada de Tribuna de la Bahía con noticias destacadas de Puerto Vallarta y Bahía de Banderas."></figure>
+      </div>
+      <div class="work-text">
+        <div class="work-title">
+          <h3>Tribuna de la Bahía</h3>
+          <p>Noticias de Puerto Vallarta y Bahía de Banderas.</p>
+        </div>
+        <div class="work-body">
+          <p>Portal de noticias regional con publicación diaria y monetización por publicidad.</p>
+          <ul>
+            <li>Arquitectura SEO y optimización de la entrega de contenido.</li>
+            <li>Integración de publicidad con Google AdSense y Tag Manager.</li>
+          </ul>
+        </div>
+        <dl class="work-meta">
+          <div><dt>Periodo</dt><dd>2022 – 2024, en CPS Media</dd></div>
+          <div><dt>Rol</dt><dd>Desarrollo y SEO</dd></div>
+          <div><dt>Stack</dt><dd>WordPress, Elementor Pro, Yoast SEO</dd></div>
+          <div class="live"><dd><a class="u" href="https://tribunadelabahia.com.mx" target="_blank" rel="noopener">tribunadelabahia.com.mx</a></dd></div>
+        </dl>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="experiencia">
+  <div class="wrap">
+    <div class="sec-head"><h2>Experiencia</h2><span>2016 – hoy</span></div>
+    <div class="jobs">
+      <div class="job">
+        <span class="when">2025 – hoy</span>
+        <div class="who"><h3>XEM</h3><p>Software Engineer</p></div>
+        <p class="what">Desarrollo sobre Odoo para CRM y ERP, y reestructura del sitio corporativo con Nuxt 3.</p>
+      </div>
+      <div class="job">
+        <span class="when">2022 – 2024</span>
+        <div class="who"><h3>CPS Media</h3><p>Desarrollador Full-Stack</p></div>
+        <p class="what">Reestructura del sistema de reservas y tickets de Marigalante y desarrollo del portal Tribuna de la Bahía.</p>
+      </div>
+      <div class="job">
+        <span class="when">2021 – 2022</span>
+        <div class="who"><h3>Grand Velas Resorts</h3><p>Programador Backend</p></div>
+        <p class="what">Dos sitios de noticias internos para colaboradores e integración con Salesforce.</p>
+      </div>
+      <div class="job">
+        <span class="when">2016 – 2021</span>
+        <div class="who"><h3>Villa Group Resorts</h3><p>Programador Analista</p></div>
+        <p class="what">Responsable de la conexión con las OTA de reservas. Construí desde cero el sistema de inventarios y CAPEX que usa la operación del hotel.</p>
+      </div>
+      <div class="job">
+        <span class="when">En paralelo</span>
+        <div class="who"><h3>Independiente</h3><p>Desarrollo a medida y seguridad</p></div>
+        <p class="what">Sistemas para el Centro Internacional de Convenciones de Puerto Vallarta y Cabo Attractions, PlaniFiesta como producto propio y respuesta a incidentes con TLS·CyberSecurity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="herramientas">
+  <div class="wrap">
+    <div class="sec-head"><h2>Herramientas</h2><span>Usadas en estos proyectos</span></div>
+    <div class="tools">
+      <div><h3>Backend</h3><p>PHP, Laravel, Livewire, Filament, Node.js, Fastify</p></div>
+      <div><h3>Frontend</h3><p>Vue 3, Nuxt 3, Next.js, Alpine.js, Tailwind CSS</p></div>
+      <div><h3>Datos</h3><p>MySQL, MariaDB, PostgreSQL, Prisma</p></div>
+      <div><h3>Integraciones</h3><p>Odoo XML-RPC, Salesforce, OTA de reservas, n8n, WhatsApp</p></div>
+      <div><h3>Infraestructura</h3><p>AWS EC2, Nginx, PM2, Certbot, Cloudflare</p></div>
+      <div><h3>CMS y SEO</h3><p>WordPress, Elementor Pro, Yoast SEO, Tag Manager, Shopify</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="contact" id="contacto">
+  <div class="wrap">
+    <p class="lead">Busco un equipo donde construir software que se use todos los días.</p>
+    <p class="mail" id="mail">ing.osmansilva@gmail.com</p>
+    <div><button class="copy" id="copy" type="button">Copiar correo</button></div>
+    <dl class="contact-grid">
+      <div><dt>Teléfono</dt><dd>+52 322 133 90 01</dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/osman-silva/" target="_blank" rel="noopener">in/osman-silva</a></dd></div>
+      <div><dt>GitHub</dt><dd><a href="https://github.com/Osilva2022" target="_blank" rel="noopener">Osilva2022</a></dd></div>
+      <div><dt>Ubicación</dt><dd>Puerto Vallarta, Jalisco</dd></div>
+    </dl>
+    <div class="legal"><span>Osman Silva Ruiz, 2026</span><a href="#top">Volver arriba</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy'),mail=document.getElementById('mail');
+  if(!btn||!mail)return;
+  function pick(){var r=document.createRange();r.selectNodeContents(mail);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Seleccionado, copia con Ctrl+C';}
+  btn.addEventListener('click',function(){
+    var t=mail.textContent.trim();
+    try{navigator.clipboard.writeText(t).then(function(){btn.textContent='Correo copiado';setTimeout(function(){btn.textContent='Copiar correo';},2000);},pick);}catch(e){pick();}
+  });
+})();
+</script>
+</body>
+</html>
+
             background-color: #0f172a;
         }
 
